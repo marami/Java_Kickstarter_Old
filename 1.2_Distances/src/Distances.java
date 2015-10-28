@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Distance{
+public class Distances{
 	
 	public static void main(String[] args) {
 		List<Integer> typedNumber = typeNumbers();
@@ -28,13 +28,12 @@ public class Distance{
 			System.out.println("You typed incorrect data");
 		}		
 		char[] numbersChar = numbersString.toCharArray();		
-		List<Integer> numbersList = new ArrayList<>();
+		List<Integer> numbersList = new ArrayList<Integer>();
 		for (int i = 0; i < numbersChar.length; i++) {
 			numbersList.add(Character.getNumericValue(numbersChar[i]));
 		}
 		return numbersList;
-	}
-		
+	}		
 	
 	static List<Integer> listRandom = new ArrayList<Integer>();
 	public static void randomList(int size) {
