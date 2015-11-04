@@ -1,7 +1,9 @@
 
 import java.util.Scanner;
 
-public class AnagramsWithRecursion {	
+import go.it.main.WordsReverse;
+
+public class AnagramsWithRecursion extends WordsReverse {	
 
 	public static void main(String[] args) {		
 		String typedText = (typeText());			

@@ -6,7 +6,7 @@ public class Distances{
 		List<Integer> typedNumber = typeNumbers();
 		System.out.println("Typed list: " + typedNumber.toString());	
 		System.out.println("Distances: " + findDistancesBetweenTwoMins(typedNumber).toString());	
-		System.out.println("");	
+		System.out.println("111");	
 		
 		List<Integer> listTest1  = Arrays.asList(1, 2, 1, 2, 1);
 		System.out.println("Test list: " + listTest1.toString());	
