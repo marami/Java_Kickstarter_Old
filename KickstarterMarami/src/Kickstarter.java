@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Kickstarter {
@@ -14,37 +15,64 @@ public class Kickstarter {
 		viewProject(projectNumber);				
 	}
 	
-	public static Integer chooseCategory() {
+	private static Integer chooseCategory() {
 		CategoryStorage.printForChoice();
 		System.out.println("\nChoose a category by number: ");		
-		categoryNumber = ConsoleInspector.getInt();
-		if(categoryNumber == 0) {
-			ConsoleInspector.close();		
-			System.out.println("See you soon!");
+		try {
+			categoryNumber = ConsoleInspector.getInt();
+			if(categoryNumber == 0) {
+				ConsoleInspector.close();		
+				System.out.println("See you soon!");
+				System.exit(0);
+				}
+			System.out.println("Current category: " + categoryStorage.getCategiry(categoryNumber - 1));		
+		}catch (Exception e) {
+			System.out.println("Ohhh no.. It is a bad number :(");
+			System.exit(0);
+		} catch (Error err) {
+			System.out.println("Ohhh no.. It is not a number :(");
 			System.exit(0);
 		}
-		System.out.println("Current category: " + categoryStorage.getCategiry(categoryNumber - 1));		
+		
+		
 		return categoryNumber;			
 	}
 	
-	public static Integer chooseProject(Integer categoryNumber) {
+	private static Integer chooseProject(Integer categoryNumber) {
 		ProjectStorage.setProjectStorage(categoryNumber - 1);
 		ProjectStorage.printAllShort();			
 		System.out.println("\nChoose a project by number: ");
-		projectNumber = ConsoleInspector.getInt();
+		try {
+			projectNumber = ConsoleInspector.getInt();		
 		if(projectNumber == 0) {
 			chooseProject(chooseCategory());
-		}
+			}
 		System.out.println("Current project: " + ProjectStorage.getProject(projectNumber).getName());
+		} catch (Exception e) {
+			System.out.println("Ohhh no.. It is a bad number :(");
+			System.exit(0);
+		} catch (Error err) {
+			System.out.println("Ohhh no.. It is not a number :(");
+			System.exit(0);
+		}
 		return projectNumber;
 	}
 	
-	public static void viewProject(Integer projectNumber){		
+	private static void viewProject(Integer projectNumber){		
 		Project project = new Project();
 		project =  ProjectStorage.getProject(projectNumber);
-		project.printFull();
-		if(ConsoleInspector.getInt() == 0) {
-			viewProject(chooseProject(categoryNumber));
+		project.printFull();				
+		while(true) {
+			try{
+				if (ConsoleInspector.getInt() == 0 ) {			
+					viewProject(chooseProject(categoryNumber));												
+				} 
+			} catch (Error err) {
+				System.out.println("Ohhh no.. It is not a number :(");
+				System.exit(0);
+			}
+			
+			System.out.println("Type 0 to choose another project");
 		}
 	}
 }
