@@ -1,4 +1,4 @@
-package integration.MySqlSuiteTests;
+package ua.com.goit.gojava7.kickstarter.MySqlSuiteTests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:/MySql/applicationContext*.xml")
+@ContextConfiguration(locations="classpath:/MySql/applicationContext.xml")
 @Transactional
 public class MySqlFillerForIT {
 

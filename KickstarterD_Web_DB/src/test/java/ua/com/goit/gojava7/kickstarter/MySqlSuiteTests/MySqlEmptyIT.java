@@ -1,4 +1,4 @@
-package integration.MySqlSuiteTests;
+package ua.com.goit.gojava7.kickstarter.MySqlSuiteTests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,8 +15,6 @@ import static org.junit.Assert.assertThat;
 @ContextConfiguration(locations="classpath:/MySql/applicationContext*.xml")
 public class MySqlEmptyIT {
 
-    @Autowired
-    private QuoteDao quoteDao;
     @Autowired
     private CategoryDao categoryDao;
     @Autowired

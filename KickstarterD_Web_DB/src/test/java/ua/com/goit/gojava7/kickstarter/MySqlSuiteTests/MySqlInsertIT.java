@@ -1,10 +1,11 @@
-package integration.MySqlSuiteTests;
+package ua.com.goit.gojava7.kickstarter.MySqlSuiteTests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 import ua.com.goit.gojava7.kickstarter.dao.*;
 import ua.com.goit.gojava7.kickstarter.model.Category;
 import ua.com.goit.gojava7.kickstarter.model.Payment;
@@ -15,7 +16,8 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:/MySql/applicationContext*.xml")
+@ContextConfiguration(locations="classpath:/MySql/applicationContext.xml")
+@Transactional
 public class MySqlInsertIT {
 
     @Autowired
