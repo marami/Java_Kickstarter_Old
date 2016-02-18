@@ -23,12 +23,12 @@ public class PaymentDaoDb implements PaymentDao {
 	@PersistenceContext
 	private EntityManager em;
 
-	public Long calculatePledgedForProject(Long projectId) {
-		log.info("<Long> calculatePledgedForProject(projectId = {})...", projectId);
+	public Long getPledged(Long projectId) {
+		log.info("<Long> getPledged(projectId = {})...", projectId);
 
 		Long sumAmount = em.createNamedQuery("Payment.calculatePledgedForProject", Long.class)
 				.setParameter("project", projectDao.get(projectId)).getSingleResult();
-		log.info("<Long> calculatePledgedForProject(projectId = {}) returned {}", projectId, sumAmount);
+		log.info("<Long> getPledged(projectId = {}) returned {}", projectId, sumAmount);
 
 		if(sumAmount == null)
 			return 0L;

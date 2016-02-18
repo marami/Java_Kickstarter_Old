@@ -111,7 +111,7 @@ public class ProjectService {
         projectDto.setGoal(project.getGoal());
         projectDto.setDaysToGo(project.getDaysToGo());
 
-        projectDto.setPledged(paymentDao.calculatePledgedForProject(project.getProjectId()));
+        projectDto.setPledged(paymentDao.getPledged(project.getProjectId()));
         log.info("<ProjectDto> constuctShortProjectDto(projectId = {}) set pledged = {}", project.getProjectId(),
                 projectDto.getPledged());
 

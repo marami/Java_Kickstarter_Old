@@ -4,7 +4,7 @@ import ua.com.goit.gojava7.kickstarter.model.Payment;
 
 public interface PaymentDao {
 
-    Long calculatePledgedForProject(Long projectId);
+    Long getPledged(Long projectId);
     void add(Payment payment);
 
 }

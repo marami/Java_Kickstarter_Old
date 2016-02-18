@@ -106,7 +106,7 @@ public class MySqlFillerForIT {
         assertThat(categoryDao.get(categoryId1).getName(), is("Test Category 1"));
         assertThat(categoryDao.getAll().size(), is(2));
         assertThat(projectDao.get(projectId1).getName(), is("Test Project 1"));
-        assertThat(paymentDao.calculatePledgedForProject(projectId1), is(300L));
+        assertThat(paymentDao.getPledged(projectId1), is(300L));
         assertThat(rewardDao.get(rewardId1).getAmount(), is(10L));
     }
 }

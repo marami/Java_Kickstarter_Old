@@ -74,6 +74,6 @@ public class MySqlInsertIT {
 
         assertThat(categoryDao.get(categoryId).getName(), is("New category for test adding payment"));
         assertThat(projectDao.get(projectId).getName(), is("New project for test adding payment"));
-        assertThat(paymentDao.calculatePledgedForProject(projectId), is(100L));
+        assertThat(paymentDao.getPledged(projectId), is(100L));
     }
 }

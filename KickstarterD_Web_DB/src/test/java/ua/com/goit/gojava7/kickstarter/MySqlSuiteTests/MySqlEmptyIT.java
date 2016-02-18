@@ -49,6 +49,6 @@ public class MySqlEmptyIT {
 
     @Test
     public void testCalculatePledgedForNonexistentProjectIs0() {
-        assertThat(paymentDao.calculatePledgedForProject(1L), is(0L));
+        assertThat(paymentDao.getPledged(1L), is(0L));
     }
 }
