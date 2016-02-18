@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "payment")
 @NamedQueries({ @NamedQuery(name = "Payment.calculatePledgedForProject",
-		query = "SELECT SUM(p.amount) FROM Payment p WHERE p.project = :project") })
+		query = "SELECT COALESCE(SUM(p.amount),0) FROM Payment p WHERE p.project = :project") })
 public class Payment {
 
 	@Id

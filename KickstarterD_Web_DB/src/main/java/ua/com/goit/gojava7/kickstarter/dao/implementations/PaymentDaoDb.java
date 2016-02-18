@@ -30,9 +30,6 @@ public class PaymentDaoDb implements PaymentDao {
 				.setParameter("project", projectDao.get(projectId)).getSingleResult();
 		log.info("<Long> getPledged(projectId = {}) returned {}", projectId, sumAmount);
 
-		if(sumAmount == null)
-			return 0L;
-
 		return sumAmount;
 	}
 
