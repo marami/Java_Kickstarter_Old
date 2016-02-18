@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.goit.gojava7.kickstarter.dao.CategoryDao;
+import ua.com.goit.gojava7.kickstarter.dao.interfaces.CategoryDao;
 import ua.com.goit.gojava7.kickstarter.model.Category;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

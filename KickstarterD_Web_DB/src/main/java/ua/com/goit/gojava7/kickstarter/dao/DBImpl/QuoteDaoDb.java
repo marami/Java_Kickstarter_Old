@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import org.springframework.transaction.annotation.Transactional;
-import ua.com.goit.gojava7.kickstarter.dao.QuoteDao;
+import ua.com.goit.gojava7.kickstarter.dao.interfaces.QuoteDao;
 import ua.com.goit.gojava7.kickstarter.model.Quote;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

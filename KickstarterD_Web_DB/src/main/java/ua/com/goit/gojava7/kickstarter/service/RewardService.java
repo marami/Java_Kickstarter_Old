@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ua.com.goit.gojava7.kickstarter.dao.RewardDao;
+import ua.com.goit.gojava7.kickstarter.dao.interfaces.RewardDao;
 import ua.com.goit.gojava7.kickstarter.dto.RewardDto;
 import ua.com.goit.gojava7.kickstarter.model.Reward;
 
