@@ -1,4 +1,4 @@
-package ua.com.goit.gojava7.kickstarter.dao.implementation;
+package ua.com.goit.gojava7.kickstarter.dao.implementations;
 
 import java.util.List;
 import org.slf4j.Logger;
