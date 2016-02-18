@@ -1,4 +1,4 @@
-package ua.com.goit.gojava7.kickstarter.dao.DBImpl;
+package ua.com.goit.gojava7.kickstarter.dao.implementation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
