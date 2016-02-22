@@ -56,19 +56,21 @@ public class Quote {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Quote other = (Quote) obj;
 		if (this.quoteId != null & other.quoteId != null) {
 			if (this.quoteId != other.quoteId) {
 				return false;
 			}
 		}
-
 		if (this.text != null & other.text != null) {
 			if (this.text != other.text) {
 				return false;

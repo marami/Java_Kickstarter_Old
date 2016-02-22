@@ -37,7 +37,6 @@ public class Project {
 	private String link;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	//@Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 	@JoinColumn(name = "category_id")
 	private Category category = new Category();	
 	
@@ -149,7 +148,6 @@ public class Project {
 	public String toString() {
 		return "Project [projectId=" + projectId + ", name=" + name
 				+ ", description=" + description + ", goal=" + goal +
-				//", pledged=" + pledged +
 				", daysToGo=" + daysToGo
 				+ ", history=" + history + ", link=" + link + ", categoryId=" + category.getCategoryId() + "]";
 	}
@@ -164,21 +162,22 @@ public class Project {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 
 		Project other = (Project) obj;
-
 		if (this.projectId != null & other.projectId != null) {
 			if (this.projectId != other.projectId) {
 				return false;
 			}
 		}
-
 		if (this.name != null & other.name != null) {
 			if (this.name != other.name) {
 				return false;

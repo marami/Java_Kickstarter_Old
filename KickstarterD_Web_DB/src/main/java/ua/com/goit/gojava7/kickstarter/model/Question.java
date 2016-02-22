@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "question")
 public class Question {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
@@ -36,7 +36,7 @@ public class Question {
 
 	public Question() {
 		this.time = new Date().toString();
-	}	
+	}
 
 	public Long getQuestionId() {
 		return questionId;
@@ -94,14 +94,16 @@ public class Question {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Question other = (Question) obj;
-
 		return this.questionId == other.questionId;
 	}
 }

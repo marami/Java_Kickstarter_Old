@@ -81,26 +81,27 @@ public class Reward {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
-		Reward other = (Reward) obj;
+		}
 
+		Reward other = (Reward) obj;
 		if (this.rewardId != null & other.rewardId != null) {
 			if (this.rewardId != other.rewardId) {
 				return false;
 			}
 		}
-
 		if (this.amount != null & other.amount != null) {
 			if (this.amount != other.amount) {
 				return false;
 			}
 		}
-
 		if (this.reward != null & other.reward != null) {
 			if (!this.reward.equals(other.reward)) {
 				return false;
