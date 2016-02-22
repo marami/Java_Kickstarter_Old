@@ -5,6 +5,9 @@
 		 version="3.0">
 
   <display-name>Kickstarter</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 
 	<!-- Spring Configuration File -->
 	<context-param>
