@@ -1,13 +1,14 @@
 package ua.com.goit.gojava7.kickstarter.service;
 
+import java.util.Random;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
 import ua.com.goit.gojava7.kickstarter.dao.interfaces.QuoteDao;
 import ua.com.goit.gojava7.kickstarter.model.Quote;
-
-import java.util.Random;
 
 @Repository
 public class QuoteService {

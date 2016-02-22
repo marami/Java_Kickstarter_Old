@@ -1,9 +1,11 @@
 package ua.com.goit.gojava7.kickstarter.dto;
 
-import ua.com.goit.gojava7.kickstarter.model.*;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import ua.com.goit.gojava7.kickstarter.model.Payment;
+import ua.com.goit.gojava7.kickstarter.model.Question;
+import ua.com.goit.gojava7.kickstarter.model.Reward;
 
 public class ProjectDto{
 
