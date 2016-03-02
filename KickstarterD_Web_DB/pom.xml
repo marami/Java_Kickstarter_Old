@@ -11,10 +11,26 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<spring-version>4.2.3.RELEASE</spring-version>
-		<spring.securiry.version>4.0.3.RELEASE</spring.securiry.version>
+
+		<com.h2database.version>1.4.190</com.h2database.version>
+		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+		<junit.version>4.12</junit.version>
+		<jstl.version>1.2</jstl.version>
+		<mysql-connector-java.version>5.1.37</mysql-connector-java.version>
+
+		<org.apache.commons-dbcp2.version>2.1.1</org.apache.commons-dbcp2.version>
+		<org.aspectj.version>1.8.7</org.aspectj.version>
+		<org.hibernate-entitymanager.version>5.0.7.Final</org.hibernate-entitymanager.version>
 		<org.slf4j.version>1.7.13</org.slf4j.version>
+		<org.spring.version>4.2.3.RELEASE</org.spring.version>
+		<org.spring.securiry.version>4.0.3.RELEASE</org.spring.securiry.version>
 		<org.powermock.version>1.6.4</org.powermock.version>
+		<org.mockito-all.version>1.10.19</org.mockito-all.version>
+
+		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+		<maven-war-plugin.version>2.6</maven-war-plugin.version>
+		<maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
+		<org.apache.maven.plugins.version>2.19.1</org.apache.maven.plugins.version>
 	</properties>
 
 	<dependencies>
@@ -23,7 +39,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<version>${javax.servlet-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Servlet end -->
@@ -32,14 +48,14 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-			<version>1.10.19</version>
+			<version>${org.mockito-all.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -67,20 +83,20 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>${spring-version}</version>
+            <version>${org.spring.version}</version>
             <scope>test</scope>
         </dependency>
 
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${jstl.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>1.4.190</version>
+			<version>${com.h2database.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- test end -->
@@ -89,13 +105,13 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.37</version>
+			<version>${mysql-connector-java.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-dbcp2</artifactId>
-			<version>2.1.1</version>
+			<version>${org.apache.commons-dbcp2.version}</version>
 		</dependency>
 		<!-- Database end -->
 
@@ -103,37 +119,37 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>	
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${spring-version}</version>
+			<version>${org.spring.version}</version>
 		</dependency>
 		<!-- springframework end -->
 
@@ -155,13 +171,13 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.8.7</version>
+			<version>${org.aspectj.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
-			<version>1.8.7</version>
+			<version>${org.aspectj.version}</version>
 		</dependency>
 		<!-- Aspects end -->
 
@@ -169,7 +185,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.0.7.Final</version>
+			<version>${org.hibernate-entitymanager.version}</version>
 		</dependency>
 		<!-- JPA end -->
 
@@ -177,25 +193,25 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>${spring.securiry.version}</version>
+			<version>${org.spring.securiry.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>${spring.securiry.version}</version>
+			<version>${org.spring.securiry.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>${spring.securiry.version}</version>
+			<version>${org.spring.securiry.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>${spring.securiry.version}</version>
+			<version>${org.spring.securiry.version}</version>
 		</dependency>
 		<!-- Spring Security end -->
 
@@ -206,7 +222,7 @@
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -215,7 +231,7 @@
 
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
+				<version>${maven-war-plugin.version}</version>
 				<configuration>
 					<packagingExcludes>**/DB/**</packagingExcludes>
 				</configuration>
@@ -224,7 +240,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${org.apache.maven.plugins.version}</version>
                 <configuration>
                     <!-- Skip the default running of this plug-in (or everything is run twice...see below) -->
                     <skip>true</skip>
@@ -253,7 +269,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${org.apache.maven.plugins.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -272,7 +288,7 @@
 
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.6</version>
+				<version>${maven-assembly-plugin.version}</version>
 				<configuration>
 					<descriptors>
 						<descriptor>src/main/webapp/WEB-INF/assembly.xml</descriptor>
